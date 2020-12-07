@@ -1,0 +1,29 @@
+.footer {
+    border-top: 1px solid #222;
+    position:absolute;
+    left:0;
+    bottom:0;
+    right:0;
+    
+    
+  }
+  
+  .fontawesome_size {
+    font-size: 26px;
+    padding:  0 5px;
+    margin: 0;
+  }
+
+  html, body{
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  p{
+    color:black;
+  }
+
+  a{
+    color:white;
+  }

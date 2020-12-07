@@ -1,61 +1,84 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
 
+.MealPlan{
+    margin: auto;
+    width: 50%;
+    margin-top: 0;
+}
+
+.mealImg{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 110%;
+    height: 700px;
+  }
+
+
+
 * {
   box-sizing: border-box;
 }
-body {
+.mealplan-auth-wrapper, body {
   background: #1C8EF9 !important;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,label,span {
+.mealplan-auth-wrapper, h1,h2,h3,h4,h5,h6,label,span {
   font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
 }
 
-body, html, .App, #root, .auth-wrapper {
+.mealplan-auth-wrapper, body, html, .App, #root, .auth-wrapper {
   width: 100%;
   height: 100%;
 }
 
-.navbar-light {
+.mealplan-auth-wrapper, .navbar-light {
   background-color: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  /* box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2); */
 }
 
-.auth-wrapper {
+.mealplan-auth-wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: left;
 }
 
-.auth-inner {
+.mealplan-auth-wrapper .auth-inner {
   width: 450px;
-  margin: auto;
+  /* margin: auto; */
   background: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  /* box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2); */
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
   transition: all .3s;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  margin-top: -50px;
+  margin-left: -100px;
 }
 
-.auth-wrapper .form-control:focus {
+.mealplan-auth-wrapper, .form-control:focus {
   border-color: #167bff;
   box-shadow: none;
 }
 
-.auth-wrapper h3 {
+.mealplan-auth-wrapper h3 {
   text-align: center;
   margin: 0;
   line-height: 1;
   padding-bottom: 20px;
 }
 
-.custom-control-label {
+.mealplan-auth-wrapper .custom-control-label {
   font-weight: 400;
 }
 
@@ -70,13 +93,4 @@ body, html, .App, #root, .auth-wrapper {
 
 .forgot-password a {
   color: #167bff;
-}
-
-.mealImg{
-  text-align: center;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 200%;
 }

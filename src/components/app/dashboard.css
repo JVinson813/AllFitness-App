@@ -1,0 +1,32 @@
+.Card{
+    height: 200px !important;
+}
+
+.CardText{
+    height: 100px !important;
+}
+
+.Block{
+    margin: auto !important;
+    margin-top: 15% !important;
+    border-color: black !important;
+}
+
+.Block{
+    
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 40px 55px 45px 55px;
+    border-radius: 15px;
+    transition: all .3s;
+  }
+
+body{
+    height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6,label,span {
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+  }
