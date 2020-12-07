@@ -22,7 +22,7 @@ const FoodTableComponent = (props) => {
   
 
   const deleteFood = (activeId) => {
-    fetch(`${APIURL}/food${activeId}`, {
+    fetch(`${APIURL}/food/${activeId}`, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json',

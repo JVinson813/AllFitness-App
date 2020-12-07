@@ -19,7 +19,7 @@ const FoodUpdateComponent = (props) => {
 
   const postFood = (data) => {
     
-    fetch(`${APIURL}/food${props.activeId}`, {
+    fetch(`${APIURL}/food/${props.activeId}`, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: new Headers ({
