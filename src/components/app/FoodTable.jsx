@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Table, Container } from 'reactstrap';
 import {Button} from 'react-bootstrap';
 import Log from './Log';
+import APIURL from '../app/helpers/environment';
 import './foodtable.css';
 
 import FoodEntryComponent from './FoodEntry';
@@ -21,7 +22,7 @@ const FoodTableComponent = (props) => {
   
 
   const deleteFood = (activeId) => {
-    fetch(`http://localhost:4500/food/${activeId}`, {
+    fetch(`${APIURL}/food${activeId}`, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json',
@@ -33,7 +34,7 @@ const FoodTableComponent = (props) => {
 
   
   const fetchFoodTable = (() => {
-    fetch('http://localhost:4500/food/getall', {
+    fetch(`${APIURL}/food/getall`, {
       method: 'GET',
       headers: {
         "Content-Type": "application/json",

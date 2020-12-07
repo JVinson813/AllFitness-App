@@ -1,5 +1,6 @@
 import React,  { useState } from 'react';
 import {FormGroup, Button, Form, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import APIURL from '../app/helpers/environment';
 
 const FoodUpdateComponent = (props) => {
 
@@ -18,7 +19,7 @@ const FoodUpdateComponent = (props) => {
 
   const postFood = (data) => {
     
-    fetch(`http://localhost:4500/food/${props.activeId}`, {
+    fetch(`${APIURL}/food${props.activeId}`, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: new Headers ({

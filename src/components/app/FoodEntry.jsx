@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Form, FormGroup, Label, Input, Button, Modal, ModalBody, ModalHeader} from 'reactstrap'
 import './foodentry.css';
+import APIURL from '../app/helpers/environment';
 
 const FoodEntryComponent = (props) => {
   const [name, setName] = useState('');
@@ -22,7 +23,7 @@ const FoodEntryComponent = (props) => {
   
   const postFood = (data) => {
     
-    fetch('http://localhost:4500/food', {
+    fetch(`${APIURL}/food`, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: new Headers ({

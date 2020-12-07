@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import APIURL from '../app/helpers/environment';
 import './register.css';
 import Footer from '../app/Footer';
 
@@ -19,7 +20,7 @@ export default class Register extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:4500/user/register', {
+        fetch(`${APIURL}/user/register`, {
             method: 'POST',
             body: JSON.stringify({user:{username: this.state.username, password: this.state.password}}),
             headers: new Headers({

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './login.css'
 import {withRouter} from 'react-router-dom';
+import APIURL from '../app/helpers/environment';
 import Footer from '../app/Footer';
 
 class Login extends Component {
@@ -22,7 +23,7 @@ class Login extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:4500/user/login', {
+        fetch(`${APIURL}/user/login`, {
             method: 'POST',
             body: JSON.stringify({user:{username: this.state.username, password: this.state.password}}),
             headers: new Headers({

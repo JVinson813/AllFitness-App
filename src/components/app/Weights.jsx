@@ -3,6 +3,7 @@ import CardLog from './CardComponent';
 import {Row, Input} from 'reactstrap';
 import {Button} from 'react-bootstrap';
 import './weights.css';
+import APIURL from '../app/helpers/environment';
 
 
 
@@ -34,7 +35,7 @@ class WeightsComponent extends React.Component{
             }
             // fetch('http://204.235.60.194/exrxapi/v1/allinclusive/exercises?exercisename=burpee')
             
-            fetch(`http://localhost:4500/workout`, requestOptions)
+            fetch(`${APIURL}/workout`, requestOptions)
             .then(function(response){
                 return response.json();
             })
