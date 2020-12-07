@@ -111,7 +111,7 @@ class App extends React.Component {
         <div className="yay">
           <div className="yay">
             <Switch>
-              {/* <Route exact path='/'><Login authenticateUser={this.authenticateUser}/></Route> */}
+              <Route exact path='/'><Login authenticateUser={this.authenticateUser}/></Route>
               <Route path="/login" ><Login authenticateUser={this.authenticateUser}/></Route>
               <Route path="/register"><Register authenticateUser={this.authenticateUser}/></Route>
             </Switch>
