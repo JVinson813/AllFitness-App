@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { FormGroup, Form, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import {Button} from 'react-bootstrap';
+import APIURL from '../app/helpers/environment';
 import './edit.css';
 
 const WorkoutEdit = (props) => {
@@ -11,7 +12,7 @@ const WorkoutEdit = (props) => {
 
     const workoutUpdate = (event, workout) => {
         event.preventDefault();
-        fetch(`http://localhost:4500/log/${props.workoutToUpdate.id}`, {
+        fetch(`${APIURL}/log/${props.workoutToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({log: {exercise: editExercise, musclegroup: editMuscleGroup, reps: editReps, weight: editWeight}}),
             headers: new Headers({

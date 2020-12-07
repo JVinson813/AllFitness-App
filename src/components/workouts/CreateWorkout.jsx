@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Form, FormGroup, Label, Input} from 'reactstrap';
 import {Button} from 'react-bootstrap';
+import APIURL from '../app/helpers/environment';
 import './createworkout.css';
 
 const WorkoutCreate = (props) => {
@@ -11,7 +12,7 @@ const WorkoutCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:4500/log', {
+        fetch(`${APIURL}/log`, {
             method: 'POST',
             body: JSON.stringify({log: {exercise: exercise, musclegroup: musclegroup, reps: reps, weight: weight}}),
             headers: new Headers ({
