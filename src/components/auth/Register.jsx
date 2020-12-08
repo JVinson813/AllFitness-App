@@ -65,7 +65,7 @@ class Register extends React.Component {
                     {this.state.password.length < 5 ? <span>Must be 5 or more characters</span> : null}
                 </div>
 
-                <button disable={!this.state.username || !this.state.password || this.state.username.length < 5} type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                <button disabled={ this.state.password.length < 5 || this.state.username.length < 5} type="submit" className="btn btn-primary btn-block">Sign Up</button>
                 <p className="forgot-password text-right">
                 Already registered <a href="/login">sign in?</a>
                 </p>

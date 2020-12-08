@@ -68,7 +68,7 @@ class Login extends Component {
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">Submit</button>
+                <button disabled={ this.state.password.length < 5 || this.state.username.length < 5} type="submit" className="btn btn-primary btn-block">Submit</button>
                 <p className="forgot-password text-right">
                 Need to Register? <a href="/register">Create Account</a>
                 </p>
