@@ -30,6 +30,7 @@ class Dashboard extends React.Component {
 render(){
   return (
     <>
+    
     <Row>
         <Col sm='6'>
            <Card className='Block' style={{ width: '25rem' }}>
