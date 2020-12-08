@@ -1,3 +1,15 @@
+# Project Title
+I named this project AllFitness. I am a personal trainer and gym owner, and I wanted to attempt to make my own workout app. The goal of this project was to be able to teach all levels of fitness enthusiasts how to properly perform workouts and guide them in their routines. I've also included a nutrition tracker, as well as a workout journal to keep track of the exercises performed and weight used so you can track your progress!
+
+# Code/Tech Used
+This project was created using the React Framework. 
+
+# API References
+Exrx.net
+https://developer.edamam.com/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
