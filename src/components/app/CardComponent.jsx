@@ -21,11 +21,11 @@ class CardLog extends React.Component{
         return(
         
         <Col sm='4'>
-           <Card className='Block' style={{ width: '25rem' }}>
+           <Card className='Block' style={{ width: '30rem', height: '35rem' }}>
                <CardImg className='Card' variant='top' src={this.props.exercise.GIF_Img}/>
                <CardBody>
                    <CardTitle>{this.props.exercise.Exercise_Name}</CardTitle>
-                   <CardText className='CardText'>{this.props.exercise.Instructions_Execution}</CardText>
+                   <CardText className='CardText' >{this.props.exercise.Instructions_Execution}</CardText>
                </CardBody>
             </Card> 
         </Col>

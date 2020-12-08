@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import APIURL from '../app/helpers/environment';
+import {withRouter} from 'react-router-dom';
 import './register.css';
 import Footer from '../app/Footer';
 
-export default class Register extends Component {
+class Register extends React.Component {
     constructor(props){
         super(props);
         this.state={
@@ -17,7 +18,8 @@ export default class Register extends Component {
             [event.target.name]: event.target.value,
         });
     }
-
+    
+    
     handleSubmit = (event) => {
         event.preventDefault();
         fetch(`${APIURL}/user/register`, {
@@ -32,6 +34,9 @@ export default class Register extends Component {
             this.props.authenticateUser(data.sessionToken)
             console.log('you are in!!!!');
         })
+        .then(
+            this.props.history.push('/dashboard')
+        )
     }
             
             
@@ -50,15 +55,17 @@ export default class Register extends Component {
 
                 <div className="form-group">
                     <label>Username</label>
-                    <input type="text" className="form-control" placeholder="Username" name='username' onChange={this.handleChange}/>
+                    <input type="text" className="form-control" placeholder="Username" name='username' value={this.username} onChange={this.handleChange}/>
+                    {this.state.username.length < 5 ? <span>Must be 5 or more characters</span> : null}
                 </div>
 
                 <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" name='password' onChange={this.handleChange}/>
+                    <input type="password" className="form-control" placeholder="Enter password" name='password' value={this.password} onChange={this.handleChange}/>
+                    {this.state.password.length < 5 ? <span>Must be 5 or more characters</span> : null}
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                <button disable={!this.state.username || !this.state.password || this.state.username.length < 5} type="submit" className="btn btn-primary btn-block">Sign Up</button>
                 <p className="forgot-password text-right">
                     Already registered <a href="/login">sign in?</a>
                 </p>
@@ -69,3 +76,5 @@ export default class Register extends Component {
         );
     }
 }
+
+export default withRouter (Register);

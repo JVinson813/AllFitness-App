@@ -10,10 +10,10 @@ import Dashboard from './components/app/Dashboard';
 import BodyWeightComponent from './components/app/BodyWeight';
 import WeightsComponent from './components/app/Weights';
 import MealPlan from './components/app/MealPlan';
-import Footer from './components/app/Footer';
+
 import FoodTableComponent from './components/app/FoodTable';
 import WorkoutIndex from './components/workouts/IndexWorkouts';
-import WorkoutCreate from './components/workouts/CreateWorkout';
+
 import FoodEntryComponent from './components/app/FoodEntry';
 import FoodUpdateComponent from './components/app/FoodUpdate';
 

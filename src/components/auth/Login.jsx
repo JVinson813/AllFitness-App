@@ -9,7 +9,7 @@ class Login extends Component {
         super(props);
         console.log(props);
         this.state={
-            email: '',
+            username: '',
             password: ''
 
         }
@@ -18,6 +18,7 @@ class Login extends Component {
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
+            
         });
     }
 
@@ -50,12 +51,14 @@ class Login extends Component {
 
                 <div className="form-group">
                     <label>Username</label>
-                    <input type="username" className="form-control" placeholder="Enter username" name='username' onChange={this.handleChange}/>
+                    <input type="username" className="form-control" placeholder="Enter username" name='username' value={this.username} onChange={this.handleChange}/>
+                    {this.state.username.length < 5 ? <span>Must be 5 or more characters</span> : null}
                 </div>
 
                 <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" name='password' onChange={this.handleChange}/>
+                    <input type="password" className="form-control" placeholder="Enter password" name='password' value={this.password} onChange={this.handleChange}/>
+                    {this.state.password.length < 5 ? <span>Must be 5 or more characters</span> : null}
                 </div>
 
                 <div className="form-group">
@@ -67,7 +70,7 @@ class Login extends Component {
 
                 <button type="submit" className="btn btn-primary btn-block">Submit</button>
                 <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
+                Need to Register? <a href="/register">Create Account</a>
                 </p>
             </form>
             </div>
